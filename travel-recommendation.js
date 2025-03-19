@@ -31,7 +31,7 @@ fetch('travel-recommendation-api.json')
             resultAll.classList = "result-all"
 
             data.forEach(element => {
-            
+            console.log(element)
                 const citiesAll = document.createElement("div")
                 citiesAll.classList = 'cities-all'
 
@@ -48,6 +48,10 @@ fetch('travel-recommendation-api.json')
                 const image_description = document.createElement('p')
                 image_description.innerHTML = element.description
 
+                const button = document.createElement('button')
+                button.classList = 'btn'
+                button.innerHTML = 'Visit'
+                button.style.margin = "0.2rem"
                 images.src = element.imageUrl
                 console.log(element.name)
             
@@ -55,6 +59,7 @@ fetch('travel-recommendation-api.json')
                 images_box.appendChild(images)
                 citiesAll.appendChild(images_box)
                 citiesAll.appendChild(image_description)
+                citiesAll.appendChild(button)
                 resultAll.appendChild(citiesAll)
         });
         search_responses.appendChild(resultAll)
@@ -96,12 +101,12 @@ fetch('travel-recommendation-api.json')
     }
     btn_clear.addEventListener('click', clearSearchResult)
     
+    const options = { timeZone: 'America/New_York', hour12: true, hour: 'numeric', minute: 'numeric', second: 'numeric' };
+    const newYorkTime = new Date().toLocaleTimeString('en-US', options);
+    console.log("Current time in New York:", newYorkTime);
 })
 
 .catch(error =>{
     console.error("error :", error)
 })
 
-const options = { timeZone: 'America/New_York', hour12: true, hour: 'numeric', minute: 'numeric', second: 'numeric' };
-const newYorkTime = new Date().toLocaleTimeString('en-US', options);
-console.log("Current time in New York:", newYorkTime);
