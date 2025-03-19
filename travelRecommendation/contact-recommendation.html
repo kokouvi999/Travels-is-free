@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travels is free</title>
+    <title>Contact Us</title>
     <link rel="stylesheet" href="travel-recommendation.css">
 </head>
 <body>
@@ -23,9 +23,9 @@
             </div>
             <div class="nav-bar">
                 <ul>
-                    <li><a class="active" href="travel-recommendation.html">Home</a></li>
+                    <li><a  href="travel-recommendation.html">Home</a></li>
                     <li><a href="about-recommendation.html">About Us</a></li>
-                    <li><a href="contact-recommendation.html">Contact Us</a></li>
+                    <li><a class="active" href="contact-recommendation.html">Contact Us</a></li>
                 </ul>
             </div>
             <div class="search-box">
@@ -108,26 +108,36 @@
                 </div>
               
             </div>
-            <div class="title">
-                <div class="title-big">
-                    <h1>EXPLORE</h1>
-                    <h1>DREAM</h1>
-                    <h1>DESTINATION</h1>
+
+            <div class="contact-container">
+                <div class="contact-title">
+                    <h1>
+                        CONTACT US
+                    </h1>
+                    <p>Get in touch...</p>
                 </div>
-                <div>
-                    <p>some text some text some text some text some text text some text some text some text some text
-                    text some text some text some text some text text some text some text some text some text
-                    </p>
-                </div>
-                <div>
-                    <button class="btn">Follow for more</button>
+                <div class="contact-form">
+                    <form action="">
+                        <div>
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="" >
+                        </div>
+                        <div>
+                            <label for="name">Email</label>
+                            <input type="text" id="email" placeholder="" >
+                        </div>
+                        <div>
+                            <label for="name">Message</label>
+                            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                        </div>
+                        <div>
+                            <input type="button" id="submit" class="btn" value="submit">
+                        </div>
+                    </form>
                 </div>
             </div>
-           
-           
         </div>
     </section>
     <script src="travel-recommendation.js"></script>
 </body>
-
 </html>
